@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insectraa | Research</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  <!-- Minimal research styling (compatible with your theme) -->
+  <style>
+    .research-wrapper {
+      max-width: 1100px;
+      margin: auto;
+      margin-top: 2rem;
+      z-index: 3;
+      position: relative;
+    }
+
+    .research-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(144,238,144,0.15);
+      padding: 2rem;
+      border-radius: 14px;
+      margin-bottom: 2rem;
+      box-shadow: inset 0 0 40px rgba(144, 238, 144, 0.05);
+      backdrop-filter: blur(6px);
+      transition: 0.3s;
+    }
+
+    .research-card:hover {
+      box-shadow: 0 0 20px rgba(144,238,144,0.15);
+      transform: translateY(-4px);
+    }
+
+    .accordion {
+      width: 100%;
+      text-align: left;
+      font-size: 1.1rem;
+      padding: 12px 15px;
+      border-radius: 10px;
+      border: 1px solid rgba(144,238,144,0.2);
+      background: rgba(255,255,255,0.06);
+      cursor: pointer;
+      color: #cfffce;
+      margin-top: 1rem;
+      transition: 0.3s;
+    }
+
+    .accordion:hover {
+      background: rgba(144,238,144,0.1);
+      box-shadow: 0 0 12px rgba(144,238,144,0.2);
+    }
+
+    .panel {
+      display: none;
+      padding: 1rem 0.5rem;
+      animation: fade 0.3s;
+    }
+
+    @keyframes fade { from {opacity: 0;} to {opacity: 1;} }
+
+    .image-box, .chart-box {
+      background: rgba(255,255,255,0.06);
+      padding: 1rem;
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid rgba(144,238,144,0.15);
+      margin-top: 1rem;
+    }
+
+    .timeline {
+      border-left: 2px solid #90ee90;
+      margin-left: 1rem;
+      padding-left: 1rem;
+    }
+
+    .time-entry {
+      margin-bottom: 8px;
+      color: #d4ffd4;
+    }
+  </style>
+</head>
+
+<body class="dark-bg">
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo"><a href="{{ url_for('home') }}">Insectraa</a></div>
+  <div class="nav-links">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('test') }}">Test Platform</a>
+    <a href="{{ url_for('research') }}" class="active">Research</a>
+  </div>
+</nav>
+
+<div class="top-glow"></div>
+
+<section class="research-section">
+  <h2>Research & Development</h2>
+
+  <div class="research-wrapper">
+
+    <!-- 1. INTRODUCTION -->
+    <div class="research-card">
+      <h3>Introduction</h3>
+      <p>Write a short explanation about why audio-based insect detection is needed...</p>
+    </div>
+
+    <!-- 2. PROBLEM STATEMENT -->
+    <div class="research-card">
+      <h3>Problem Statement</h3>
+      <p>Explain the key issues in manual insect identification, farm challenges, etc...</p>
+    </div>
+
+    <!-- 3. OBJECTIVES -->
+    <div class="research-card">
+      <h3>Project Objectives</h3>
+      <ul>
+        <li>Build an audio-based insect classification system</li>
+        <li>Classify into 5 categories</li>
+        <li>Use 1D CNN on CSV numeric audio features</li>
+        <li>Create a farmer-friendly UI</li>
+      </ul>
+    </div>
+
+    <!-- 4. DATASET -->
+    <div class="research-card">
+      <h3>Dataset Overview</h3>
+      <ul>
+        <li>Source: Xeno-Canto, BioAcoustica, field recordings</li>
+        <li>Total samples collected: <b>---</b></li>
+        <li>Final distribution after cleaning: <b>---</b></li>
+      </ul>
+
+      <div class="image-box">
+        <p>📊 Insert class distribution graph here</p>
+      </div>
+    </div>
+
+    <!-- 5. PREPROCESSING -->
+    <div class="research-card">
+      <h3>Preprocessing Pipeline</h3>
+      <ul>
+        <li>Resampling to 16 kHz</li>
+        <li>Mono conversion</li>
+        <li>Clipping into segments</li>
+        <li>Amplitude normalization</li>
+        <li>Feature extraction → CSV</li>
+      </ul>
+
+      <button class="accordion">Show Detailed Preprocessing Steps</button>
+      <div class="panel">
+        <p>Write detailed technical breakdown for your preprocessing...</p>
+      </div>
+    </div>
+
+    <!-- 6. FEATURE EXTRACTION -->
+    <div class="research-card">
+      <h3>Feature Extraction (Numeric CSV)</h3>
+      <p>List MFCC, spectral, chroma, etc.</p>
+
+      <button class="accordion">Show Feature Formulas</button>
+      <div class="panel">
+        <p>MFCC, Spectral Centroid equations etc can be placed here...</p>
+      </div>
+
+      <div class="image-box">
+        <p>📊 Insert MFCC / feature sample plots</p>
+      </div>
+    </div>
+
+    <!-- 7. MODEL ARCHITECTURE -->
+    <div class="research-card">
+      <h3>Model Architecture (1D-CNN)</h3>
+      <p>Describe your model structure here...</p>
+
+      <div class="image-box">
+        <p>🖼 Insert model architecture diagram</p>
+      </div>
+
+      <button class="accordion">Show Architecture Code</button>
+      <div class="panel">
+        <pre>
+Conv1D → ReLU → MaxPool
+Conv1D → ReLU → MaxPool
+Flatten → Dense → Softmax(5)
+        </pre>
+      </div>
+    </div>
+
+    <!-- 8. TRAINING & EVALUATION -->
+    <div class="research-card">
+      <h3>Training & Evaluation</h3>
+      <ul>
+        <li>Optimizer: Adam</li>
+        <li>Loss: Categorical Crossentropy</li>
+        <li>Epochs: <b>--</b></li>
+      </ul>
+
+      <div class="chart-box">
+        <p>📉 Insert training & validation accuracy/loss curves</p>
+      </div>
+    </div>
+
+    <!-- 9. RESULTS -->
+    <div class="research-card">
+      <h3>Final Results</h3>
+      <ul>
+        <li>Overall accuracy: <b>--%</b></li>
+        <li>Class-wise performance</li>
+        <li>Inference speed</li>
+      </ul>
+
+      <div class="image-box">
+        <p>📊 Insert Confusion Matrix</p>
+      </div>
+    </div>
+
+    <!-- 10. SYSTEM PIPELINE -->
+    <div class="research-card">
+      <h3>System Architecture (End-to-End)</h3>
+
+      <div class="image-box">
+        <p>🖼 Insert Full System Pipeline Diagram</p>
+      </div>
+
+      <p>Audio Input → Preprocessing → 1D-CNN → Prediction → UI Display</p>
+    </div>
+
+    <!-- 11. LIMITATIONS & FUTURE WORK -->
+    <div class="research-card">
+      <h3>Limitations & Future Scope</h3>
+      <ul>
+        <li>Noise sensitivity</li>
+        <li>Limited species-specific accuracy</li>
+        <li>Need more diverse datasets</li>
+      </ul>
+
+      <p><b>Future:</b> Expand species list, improve noise handling, mobile app, live stream detection...</p>
+    </div>
+
+    <!-- 12. CONCLUSION -->
+    <div class="research-card">
+      <h3>Conclusion</h3>
+      <p>Insert final project summary here...</p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer-glow">
+  <p>© 2025 Insectraa — Bridging Nature & AI</p>
+</footer>
+
+<script>
+  const acc = document.getElementsByClassName("accordion");
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      panel.style.display = panel.style.display === "block" ? "none" : "block";
+    });
+  }
+</script>
+
+</body>
+</html>

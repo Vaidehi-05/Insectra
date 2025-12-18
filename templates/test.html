@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insectraa | Test Platform</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="dark-bg">
+  
+  <nav class="navbar">
+  <div class="logo">
+    <a href="{{ url_for('home') }}">Insectraa</a>
+  </div>
+  <div class="nav-links">
+    <a href="{{ url_for('home') }}" class="{% if request.path == '/' %}active{% endif %}">Home</a>
+    <a href="{{ url_for('test') }}" class="{% if request.path == '/test' %}active{% endif %}">Test Platform</a>
+    <a href="{{ url_for('research') }}" class="{% if request.path == '/research' %}active{% endif %}">Research</a>
+  </div>
+</nav>
+
+
+  <div class="top-glow"></div>
+  <div class="content-center">
+  <section class="test-section">
+    <h2>Test Insect Sound Classification</h2>
+    <p>Choose how you’d like to test the model.</p>
+
+    <!-- Record Audio Form -->
+    <div class="record-box">
+      <p>Or record live audio:</p>
+      
+      <button id="recordBtn" class="btn">🎙 Start Recording</button>
+      <button id="stopBtn" class="btn" style="display:none;background:#ff6f6f;">⛔ Stop</button>
+
+      <p id="record-status" style="margin-top:10px;color:#90ee90;"></p>
+
+      <form id="recordForm" action="/predict_upload" method="POST" enctype="multipart/form-data" style="display:none;">
+        <input type="file" name="audio" id="recordedAudio" required>
+      </form>
+    </div>
+
+    <div class="mode-container">
+      <form action="/result" method="POST">
+        <button class="btn">Run Demo Test</button>
+      </form>
+
+      <form action="/predict_upload" method="POST" enctype="multipart/form-data">
+        <label for="audio" class="upload-label">Upload your audio (.wav)</label>
+        <input type="file" name="audio" id="audio" accept=".wav" required>
+        <button class="btn">Analyze Audio</button>
+      </form>
+    </div>
+
+    {% if result %}
+      <div class="result-card">
+        <h3>{{ result }}</h3>
+        {% if mode == 'upload' %}
+          <p>Your uploaded audio was successfully processed.</p>
+        {% else %}
+          <p>Demo sample analyzed using pre-trained model split.</p>
+        {% endif %}
+      </div>
+    {% endif %}
+    </div>
+  </section>
+  <footer class="footer-glow">
+  <p>2025 Insectraa — Bridging Nature & AI</p>
+</footer>
+
+<script>
+let chunks = [];
+let recorder;
+let stream;
+
+const recordBtn = document.getElementById("recordBtn");
+const stopBtn = document.getElementById("stopBtn");
+const statusText = document.getElementById("record-status");
+const audioInput = document.getElementById("recordedAudio");
+
+recordBtn.onclick = async () => {
+  stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+
+  recorder = new MediaRecorder(stream);
+  chunks = [];
+
+  recorder.ondataavailable = e => chunks.push(e.data);
+
+  recorder.onstop = async () => {
+    const blob = new Blob(chunks, { type: 'audio/wav' });
+    const file = new File([blob], "recording.wav", { type: "audio/wav" });
+
+    // Put recorded file into hidden input
+    const dataTransfer = new DataTransfer();
+    dataTransfer.items.add(file);
+    audioInput.files = dataTransfer.files;
+
+    // Submit form automatically
+    document.getElementById("recordForm").submit();
+  };
+
+  recorder.start();
+  statusText.textContent = "Recording... 🎤";
+  recordBtn.style.display = "none";
+  stopBtn.style.display = "inline-block";
+};
+
+stopBtn.onclick = () => {
+  recorder.stop();
+  stream.getTracks().forEach(track => track.stop());
+
+  statusText.textContent = "Processing...";
+  stopBtn.style.display = "none";
+};
+</script>
+
+</body>
+</html>

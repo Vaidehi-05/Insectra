@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insectraa | Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="dark-bg">
+
+  <nav class="navbar">
+    <div class="logo"><a href="{{ url_for('home') }}">Insectraa</a></div>
+    <div class="nav-links">
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('test') }}">Test Platform</a>
+      <a href="{{ url_for('research') }}">Research</a>
+    </div>
+  </nav>
+
+  <section class="result-section">
+    <h2>Analysis Result</h2>
+
+    <div class="result-main">
+      <div class="result-info">
+        <h3>{{ insect.name }}</h3>
+        <p class="confidence">Confidence: {{ insect.confidence }}</p>
+      </div>
+
+      <div class="result-img">
+        <img src="{{ insect.image }}" alt="{{ insect.name }}">
+      </div>
+    </div>
+
+    <div class="about-insect">
+      <h4>About the {{ insect.name }}</h4>
+      <p>{{ insect.about }}</p>
+    </div>
+
+    <div class="control-methods">
+      <h4>Control & Prevention</h4>
+      <p>{{ insect.control }}</p>
+    </div>
+
+    <div class="back-link">
+      <a href="{{ url_for('test') }}" class="btn">Run Another Test</a>
+    </div>
+  </section>
+
+  <footer class="footer-glow">
+    <p>2025 Insectraa — Bridging Nature & AI</p>
+  </footer>
+
+</body>
+</html>

@@ -3,6 +3,7 @@
 ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)<br>
 ## A lightweight, real-time bioacoustic system for detecting and classifying insect species using engineered audio features and machine learning. 🍀
 <br>
+
 >Visual insect detection fails in darkness, dense crops, and camouflage-heavy environments.
 This project proves that sound alone is enough.
 

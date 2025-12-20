@@ -1,7 +1,8 @@
 # Insectra: Insect Acoustic Detection & Classification 🦗🎧
+<br>
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)<br>
 ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)<br>
-
+<br>
 ## A lightweight, real-time bioacoustic system for detecting and classifying insect species using engineered audio features and machine learning. 🍀
 
 >Visual insect detection fails in darkness, dense crops, and camouflage-heavy environments.
@@ -11,13 +12,13 @@ Insect Acoustic Detection & Classification is a machine-learning–powered syste
 
 ## About📝⭐<br>
 
-Insects play a critical role in agriculture, ecology, and public health — yet they are also responsible for up to 40% global crop loss annually. Traditional insect monitoring systems rely heavily on manual inspection or image-based models, both of which fail under real-world conditions such as low light, occlusion, camouflage, and nocturnal activity. <br>
+Insects play a critical role in agriculture, ecology, and public health — yet they are also responsible for up to 40% global crop loss annually. Traditional insect monitoring systems rely heavily on manual inspection or image-based models, both of which fail under real-world conditions such as low light, occlusion, camouflage, and nocturnal activity. <br><br>
 This project explores acoustic insect recognition as a robust alternative. Instead of images, it analyzes bioacoustic signatures produced by insect wingbeats and stridulation, enabling detection even in:<br>
 ✅ Low-light environments 🌙<br>
 ✅ Dense vegetation 🌿<br>
 ✅ Nocturnal settings 🕷️<br>
 ✅ Camouflage-heavy conditions 🟢<br>
-
+<br>
 The system was developed as an end-to-end ML pipeline — from dataset creation and feature engineering to model evaluation and deployment — with a strong emphasis on practicality, real-world usability and with an ultimate aim of actual field deployment.<br>
 
 ## Features 📖✨
@@ -42,6 +43,11 @@ The system was developed as an end-to-end ML pipeline — from dataset creation 
 ✔️ Selected after benchmarking 10+ ML & DL models<br>
 ✔️ High accuracy with low inference latency<br>
 ✔️ Strong performance on minority classes<br>
+<br>
+🎙️ Flexible Audio Input (Upload or Record)<br>
+✔️ Users can upload pre-recorded .wav files<br>
+✔️ Live audio recording supported directly through the interface<br>
+✔️ Enables instant testing without external audio files<br>
 <br>
 ⚙️ CPU-Only, Real-Time Friendly<br>
 ✔️ 15–22 ms inference time<br>
@@ -71,9 +77,11 @@ The system was developed as an end-to-end ML pipeline — from dataset creation 
 ![WhatsApp Image 2025-12-19 at 8 19 53 AM](https://github.com/user-attachments/assets/36b65313-8e0c-4b88-a993-d2a4aa9be43b)
 
 <br>
-📌 Sample Insect Audio Files<br>
+
+#### 📌 Sample Insect Audio Files<br>
 Included .wav files(/TrialAudio) allow users to test the model immediately without external datasets.<br>
-> Note: Sample audio files are intentionally included for model testing and reproducibility.<br>
+
+>Note: Sample audio files are intentionally included for model testing and reproducibility.<br>
 
 ## Tech Stack 🛠️🥇
 | Technology     | Purpose                               |
@@ -130,7 +138,7 @@ Multiple models were trained and evaluated:<br>
 ✔️ Stable probability calibration<br>
 ✔️ Robust under noisy conditions<br>
 ✔️ Lightweight and CPU-efficient<br>
-
+<hr>
 ## Getting Started ⚡
 ### Prerequisites 📌
 
@@ -154,7 +162,7 @@ python flask_app/app.py
 ```
 Visit:
 📍 http://127.0.0.1:5000/
-
+<hr>
 ## Testing & Validation 🧪⚠️
 
 📌 Unit testing for feature extraction & scaling<br>

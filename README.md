@@ -1,6 +1,8 @@
 # Insectra: Insect Acoustic Detection & Classification 🦗🎧
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)<br>
+![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)<br>
 
-## A real-time bioacoustic insect detection system built for agriculture & ecology 🌾🔊
+## A lightweight, real-time bioacoustic system for detecting and classifying insect species using engineered audio features and machine learning. 🍀
 
 >Visual insect detection fails in darkness, dense crops, and camouflage-heavy environments.
 This project proves that sound alone is enough.
@@ -9,14 +11,14 @@ Insect Acoustic Detection & Classification is a machine-learning–powered syste
 
 ## About📝⭐<br>
 
-Insects play a critical role in agriculture, ecology, and public health — but they are also responsible for massive crop losses every year. Traditional monitoring methods rely on manual inspection or image-based models that break down in real-world conditions.<br>
+Insects play a critical role in agriculture, ecology, and public health — yet they are also responsible for up to 40% global crop loss annually. Traditional insect monitoring systems rely heavily on manual inspection or image-based models, both of which fail under real-world conditions such as low light, occlusion, camouflage, and nocturnal activity. <br>
 This project explores acoustic insect recognition as a robust alternative. Instead of images, it analyzes bioacoustic signatures produced by insect wingbeats and stridulation, enabling detection even in:<br>
 ✅ Low-light environments 🌙<br>
 ✅ Dense vegetation 🌿<br>
 ✅ Nocturnal settings 🕷️<br>
 ✅ Camouflage-heavy conditions 🟢<br>
 
-The system was developed as an end-to-end ML pipeline — from dataset creation and feature engineering to model evaluation and deployment — with a strong emphasis on practicality and real-world usability with an ultimate aim of actual field deployment.<br>
+The system was developed as an end-to-end ML pipeline — from dataset creation and feature engineering to model evaluation and deployment — with a strong emphasis on practicality, real-world usability and with an ultimate aim of actual field deployment.<br>
 
 ## Features 📖✨
 
@@ -49,10 +51,25 @@ The system was developed as an end-to-end ML pipeline — from dataset creation 
 ✔️ Noise trimming<br>
 ✔️ RobustScaler to preserve biological outliers<br>
 <br>
+## Target Classes 🐞
+| Class                       | Description                           |
+| --------------------------- | ------------------------------------- |
+| **Chorthippus biguttulus**  | Grasshopper (major crop pest)         |
+| **Gryllus bimaculatus**     | Field cricket (nocturnal pest)        |
+| **Ruspolia nitidula**       | Katydid (high-frequency foliage pest) |
+| **Other Insects**           | Non-target insect sounds              |
+| **Environment / No Insect** | Ambient background noise              |
+
 ## Preview 👀
-![WhatsApp Image 2025-12-19 at 8 19 53 AM (1)](https://github.com/user-attachments/assets/c74e47a9-1211-494d-a579-eecd7392fe3d)
-![WhatsApp Image 2025-12-19 at 8 19 53 AM](https://github.com/user-attachments/assets/36b65313-8e0c-4b88-a993-d2a4aa9be43b)
+#### 📌 Opening Screen<br>
 ![WhatsApp Image 2025-12-19 at 8 19 52 AM](https://github.com/user-attachments/assets/fc8d0702-89d5-4815-b6fc-ed3b14e9619c)
+<br>
+#### 📌 Testing page<br>
+![WhatsApp Image 2025-12-19 at 8 19 53 AM (1)](https://github.com/user-attachments/assets/c74e47a9-1211-494d-a579-eecd7392fe3d)
+<br>
+#### 📌 Result Page <br>
+![WhatsApp Image 2025-12-19 at 8 19 53 AM](https://github.com/user-attachments/assets/36b65313-8e0c-4b88-a993-d2a4aa9be43b)
+
 <br>
 📌 Sample Insect Audio Files<br>
 Included .wav files(/TrialAudio) allow users to test the model immediately without external datasets.<br>

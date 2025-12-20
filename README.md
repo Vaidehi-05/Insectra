@@ -138,6 +138,7 @@ Multiple models were trained and evaluated:<br>
 ✔️ Robust under noisy conditions<br>
 ✔️ Lightweight and CPU-efficient<br>
 <hr>
+
 ## Getting Started ⚡
 ### Prerequisites 📌
 
@@ -162,6 +163,7 @@ python flask_app/app.py
 Visit:
 📍 http://127.0.0.1:5000/
 <hr>
+
 ## Testing & Validation 🧪⚠️
 
 📌 Unit testing for feature extraction & scaling<br>

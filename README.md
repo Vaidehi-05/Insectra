@@ -8,8 +8,8 @@
 This project proves that sound alone is enough.
 
 Insect Acoustic Detection & Classification is a machine-learning–powered system that identifies insect species using wingbeat frequencies, harmonic patterns, and MFCC-based acoustic features. Designed for CPU-only deployment, the system achieves high accuracy while remaining lightweight and field-ready.
-
-## About📝⭐<br>
+<br>
+## About📝⭐
 
 Insects play a critical role in agriculture, ecology, and public health — yet they are also responsible for up to 40% global crop loss annually. Traditional insect monitoring systems rely heavily on manual inspection or image-based models, both of which fail under real-world conditions such as low light, occlusion, camouflage, and nocturnal activity. <br><br>
 This project explores acoustic insect recognition as a robust alternative. Instead of images, it analyzes bioacoustic signatures produced by insect wingbeats and stridulation, enabling detection even in:<br>

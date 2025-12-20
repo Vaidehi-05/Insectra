@@ -9,53 +9,54 @@ Insect Acoustic Detection & Classification is a machine-learning–powered syste
 
 ## About📝⭐<br>
 
-Insects play a critical role in agriculture, ecology, and public health — but they are also responsible for massive crop losses every year. Traditional monitoring methods rely on manual inspection or image-based models that break down in real-world conditions.
-This project explores acoustic insect recognition as a robust alternative. Instead of images, it analyzes bioacoustic signatures produced by insect wingbeats and stridulation, enabling detection even in:
-✅ Low-light environments 🌙
-✅ Dense vegetation 🌿
-✅ Nocturnal settings 🕷️
-✅ Camouflage-heavy conditions 🟢
+Insects play a critical role in agriculture, ecology, and public health — but they are also responsible for massive crop losses every year. Traditional monitoring methods rely on manual inspection or image-based models that break down in real-world conditions.<br>
+This project explores acoustic insect recognition as a robust alternative. Instead of images, it analyzes bioacoustic signatures produced by insect wingbeats and stridulation, enabling detection even in:<br>
+✅ Low-light environments 🌙<br>
+✅ Dense vegetation 🌿<br>
+✅ Nocturnal settings 🕷️<br>
+✅ Camouflage-heavy conditions 🟢<br>
 
-The system was developed as an end-to-end ML pipeline — from dataset creation and feature engineering to model evaluation and deployment — with a strong emphasis on practicality and real-world usability with an ultimate aim of actual field deployment.
+The system was developed as an end-to-end ML pipeline — from dataset creation and feature engineering to model evaluation and deployment — with a strong emphasis on practicality and real-world usability with an ultimate aim of actual field deployment.<br>
 
 ## Features 📖✨
 
-🎧 Purely Acoustic Detection (No Images Needed)
-✔️ Works in darkness, clutter, and visually occluded environments
-
-🧠 266-Dimensional Engineered Feature Vector
-✔️ MFCC means & standard deviations
-✔️ Delta & delta-delta MFCCs
-✔️ Spectral descriptors (centroid, rolloff, bandwidth)
-✔️ Harmonic wingbeat peak frequencies
-
-📊 Multi-Class Classification
-✔️ Chorthippus biguttulus (Grasshopper)
-✔️ Gryllus bimaculatus (Field cricket)
-✔️ Ruspolia nitidula (Katydid)
-✔️ Other insects
-✔️ Environmental / No-insect noise
-
-🚀 XGBoost-Based Final Model
-✔️ Selected after benchmarking 10+ ML & DL models
-✔️ High accuracy with low inference latency
-✔️ Strong performance on minority classes
-
-⚙️ CPU-Only, Real-Time Friendly
-✔️ 15–22 ms inference time
-✔️ Suitable for edge & field deployment
-
-🧪 Noise-Robust Preprocessing
-✔️ Noise trimming
-✔️ RobustScaler to preserve biological outliers
-
+🎧 Purely Acoustic Detection (No Images Needed)<br>
+✔️ Works in darkness, clutter, and visually occluded environments<br>
+<br>
+🧠 266-Dimensional Engineered Feature Vector<br>
+✔️ MFCC means & standard deviations<br>
+✔️ Delta & delta-delta MFCCs<br>
+✔️ Spectral descriptors (centroid, rolloff, bandwidth)<br>
+✔️ Harmonic wingbeat peak frequencies<br>
+<br>
+📊 Multi-Class Classification<br>
+✔️ Chorthippus biguttulus (Grasshopper)<br>
+✔️ Gryllus bimaculatus (Field cricket)<br>
+✔️ Ruspolia nitidula (Katydid)<br>
+✔️ Other insects<br>
+✔️ Environmental / No-insect noise<br>
+<br>
+🚀 XGBoost-Based Final Model<br>
+✔️ Selected after benchmarking 10+ ML & DL models<br>
+✔️ High accuracy with low inference latency<br>
+✔️ Strong performance on minority classes<br>
+<br>
+⚙️ CPU-Only, Real-Time Friendly<br>
+✔️ 15–22 ms inference time<br>
+✔️ Suitable for edge & field deployment<br>
+<br>
+🧪 Noise-Robust Preprocessing<br>
+✔️ Noise trimming<br>
+✔️ RobustScaler to preserve biological outliers<br>
+<br>
 ## Preview 👀
 ![WhatsApp Image 2025-12-19 at 8 19 53 AM (1)](https://github.com/user-attachments/assets/c74e47a9-1211-494d-a579-eecd7392fe3d)
 ![WhatsApp Image 2025-12-19 at 8 19 53 AM](https://github.com/user-attachments/assets/36b65313-8e0c-4b88-a993-d2a4aa9be43b)
 ![WhatsApp Image 2025-12-19 at 8 19 52 AM](https://github.com/user-attachments/assets/fc8d0702-89d5-4815-b6fc-ed3b14e9619c)
-📌 Sample Insect Audio Files
-Included .wav files(/TrialAudio) allow users to test the model immediately without external datasets.
-> Note: Sample audio files are intentionally included for model testing and reproducibility.
+<br>
+📌 Sample Insect Audio Files<br>
+Included .wav files(/TrialAudio) allow users to test the model immediately without external datasets.<br>
+> Note: Sample audio files are intentionally included for model testing and reproducibility.<br>
 
 ## Tech Stack 🛠️🥇
 | Technology     | Purpose                               |
@@ -71,14 +72,14 @@ Included .wav files(/TrialAudio) allow users to test the model immediately witho
 
 ## How It Works 🛠️
 
-1️⃣ Raw insect audio (.wav) is provided
-2️⃣ Noise trimming & signal normalization
-3️⃣ Extraction of 266 acoustic features
-4️⃣ Features scaled using RobustScaler
-5️⃣ XGBoost model predicts insect class
-6️⃣ Result displayed with insect details
-
-This pipeline allows fast, accurate, and interpretable predictions using only audio signals.
+1️⃣ Raw insect audio (.wav) is provided<br>
+2️⃣ Noise trimming & signal normalization<br>
+3️⃣ Extraction of 266 acoustic features<br>
+4️⃣ Features scaled using RobustScaler<br>
+5️⃣ XGBoost model predicts insect class<br>
+6️⃣ Result displayed with insect details<br>
+<br>
+This pipeline allows fast, accurate, and interpretable predictions using only audio signals.<br>
 
 ## Dataset Overview 📊
 | Class                  | Samples |
@@ -89,36 +90,36 @@ This pipeline allows fast, accurate, and interpretable predictions using only au
 | Other Insects          | 3000    |
 | Environment / Noise    | 2500    |
 
-Data Sources:
-Xeno-Canto · Macaulay Library · EcoSounds · InsectSound1000 · ESC-50 · Zenodo
+Data Sources:<br>
+Xeno-Canto · Macaulay Library · EcoSounds · InsectSound1000 · ESC-50 · Zenodo<br>
 
 > Both controlled and field recordings were used to ensure realistic variability.
 
 ## Model Evaluation 🧪
-Multiple models were trained and evaluated:
-- SVM (RBF)
-- Random Forest
-- Logistic Regression
-- LightGBM
-- CatBoost
-- Extra Trees
-- AdaBoost
-- HistGradientBoosting
-- 1D CNN
-- XGBoost (Final)
+Multiple models were trained and evaluated:<br>
+- SVM (RBF)<br>
+- Random Forest<br>
+- Logistic Regression<br>
+- LightGBM<br>
+- CatBoost<br>
+- Extra Trees<br>
+- AdaBoost<br>
+- HistGradientBoosting<br>
+- 1D CNN<br>
+- XGBoost (Final)<br>
 
 #### Why XGBoost?
-✔️ Best class-wise F1 scores
-✔️ Stable probability calibration
-✔️ Robust under noisy conditions
-✔️ Lightweight and CPU-efficient
+✔️ Best class-wise F1 scores<br>
+✔️ Stable probability calibration<br>
+✔️ Robust under noisy conditions<br>
+✔️ Lightweight and CPU-efficient<br>
 
 ## Getting Started ⚡
 ### Prerequisites 📌
 
-✅ Python 3.10+
-✅ pip
-✅ Any OS (Windows / macOS / Linux)
+✅ Python 3.10+<br>
+✅ pip<br>
+✅ Any OS (Windows / macOS / Linux)<br>
 
 ### Setup & Run 🚀
 ```
@@ -139,21 +140,21 @@ Visit:
 
 ## Testing & Validation 🧪⚠️
 
-📌 Unit testing for feature extraction & scaling
-📌 Integration testing for preprocessing → model
-📌 End-to-end system testing via Flask
-📌 Robustness testing with noisy and clipped audio
-📌 Performance testing under batch inference
-📌 Average inference time: 15–22 ms (CPU)
+📌 Unit testing for feature extraction & scaling<br>
+📌 Integration testing for preprocessing → model<br>
+📌 End-to-end system testing via Flask<br>
+📌 Robustness testing with noisy and clipped audio<br>
+📌 Performance testing under batch inference<br>
+📌 Average inference time: 15–22 ms (CPU)<br>
 
 ## Future Enhancements 🌱
 
-🚀 Expand dataset (more species, seasons, geographies)
-🚀 Transformer-based audio models (AST, WaveNet)
-🚀 Continuous audio stream monitoring
-🚀 ONNX / Treelite optimization for edge devices
-🚀 Environmental metadata fusion
-🚀 Farmer-friendly mobile/web dashboard
+🚀 Expand dataset (more species, seasons, geographies)<br>
+🚀 Transformer-based audio models (AST, WaveNet)<br>
+🚀 Continuous audio stream monitoring<br>
+🚀 ONNX / Treelite optimization for edge devices<br>
+🚀 Environmental metadata fusion<br>
+🚀 Farmer-friendly mobile/web dashboard<br>
 
 > Happy Coding & Happy Research! 🦗🎧🥇
 

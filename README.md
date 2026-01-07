@@ -1,7 +1,7 @@
-# Insectra: Insect Acoustic Detection & Classification 🦗🎧
+# Insectra: Insect Acoustic Detection & Classification🦗🎧
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)<br>
 ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)<br>
-## A lightweight, real-time bioacoustic system for detecting and classifying insect species using engineered audio features and machine learning. 🍀
+## A lightweight, real-time bioacoustic system for detecting and classifying insect species using engineered audio features and machine learning.🍀
 <br>
 
 >Visual insect detection fails in darkness, dense crops, and camouflage-heavy environments.
@@ -11,14 +11,14 @@ Insect Acoustic Detection & Classification is a machine-learning–powered syste
 <br>
 ## About📝⭐
 
-Insects play a critical role in agriculture, ecology, and public health — yet they are also responsible for up to 40% global crop loss annually. Traditional insect monitoring systems rely heavily on manual inspection or image-based models, both of which fail under real-world conditions such as low light, occlusion, camouflage, and nocturnal activity. <br><br>
+Insects play a critical role in agriculture, ecology, and public health-yet they are also responsible for up to 40% global crop loss annually. Traditional insect monitoring systems rely heavily on manual inspection or image-based models, both of which fail under real-world conditions such as low light, occlusion, camouflage, and nocturnal activity. <br><br>
 This project explores acoustic insect recognition as a robust alternative. Instead of images, it analyzes bioacoustic signatures produced by insect wingbeats and stridulation, enabling detection even in:<br>
 ✅ Low-light environments 🌙<br>
 ✅ Dense vegetation 🌿<br>
 ✅ Nocturnal settings 🕷️<br>
 ✅ Camouflage-heavy conditions 🟢<br>
 <br>
-The system was developed as an end-to-end ML pipeline — from dataset creation and feature engineering to model evaluation and deployment — with a strong emphasis on practicality, real-world usability and with an ultimate aim of actual field deployment.<br>
+The system was developed as an end-to-end ML pipeline from dataset creation and feature engineering to model evaluation and deployment-with a strong emphasis on practicality, real-world usability and with an ultimate aim of actual field deployment.<br>
 
 ## Features 📖✨
 
@@ -56,7 +56,7 @@ The system was developed as an end-to-end ML pipeline — from dataset creation 
 ✔️ Noise trimming<br>
 ✔️ RobustScaler to preserve biological outliers<br>
 <br>
-## Target Classes 🐞
+## Target Classes🐞
 | Class                       | Description                           |
 | --------------------------- | ------------------------------------- |
 | **Chorthippus biguttulus**  | Grasshopper (major crop pest)         |
@@ -82,7 +82,7 @@ Included .wav files(/TrialAudio) allow users to test the model immediately witho
 
 >Note: Sample audio files are intentionally included for model testing and reproducibility.<br>
 
-## Tech Stack 🛠️🥇
+## Tech Stack🛠️🥇
 | Technology     | Purpose                               |
 | -------------- | ------------------------------------- |
 | Python         | Core implementation                   |
@@ -139,14 +139,14 @@ Multiple models were trained and evaluated:<br>
 ✔️ Lightweight and CPU-efficient<br>
 <hr>
 
-## Getting Started ⚡
-### Prerequisites 📌
+## Getting Started⚡
+### Prerequisites📌
 
 ✅ Python 3.10+<br>
 ✅ pip<br>
 ✅ Any OS (Windows / macOS / Linux)<br>
 
-### Setup & Run 🚀
+### Setup & Run🚀
 ```
 # Clone the repository
 git clone https://github.com/Vaidehi-05/Insectra.git
@@ -164,7 +164,7 @@ Visit:
 📍 http://127.0.0.1:5000/
 <hr>
 
-## Testing & Validation 🧪⚠️
+## Testing & Validation🧪⚠️
 
 📌 Unit testing for feature extraction & scaling<br>
 📌 Integration testing for preprocessing → model<br>
@@ -173,7 +173,7 @@ Visit:
 📌 Performance testing under batch inference<br>
 📌 Average inference time: 15–22 ms (CPU)<br>
 
-## Future Enhancements 🌱
+## Future Enhancements🌱
 
 🚀 Expand dataset (more species, seasons, geographies)<br>
 🚀 Transformer-based audio models (AST, WaveNet)<br>
@@ -182,5 +182,5 @@ Visit:
 🚀 Environmental metadata fusion<br>
 🚀 Farmer-friendly mobile/web dashboard<br>
 
-> Happy Coding & Happy Research! 🦗🎧🥇
+> Happy Coding & Happy Research!🦗🎧🥇
 

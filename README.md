@@ -7,7 +7,7 @@
 >Visual insect detection fails in darkness, dense crops, and camouflage-heavy environments.
 This project proves that sound alone is enough.
 
-Insect Acoustic Detection & Classification is a machine-learning–powered system that identifies insect species using wingbeat frequencies, harmonic patterns, and MFCC-based acoustic features. Designed for CPU-only deployment, the system achieves high accuracy while remaining lightweight and field-ready.
+Insect Acoustic Detection & Classification is a machine-learning-powered system that identifies insect species using wingbeat frequencies, harmonic patterns, and MFCC-based acoustic features. Designed for CPU-only deployment, the system achieves high accuracy while remaining lightweight and field-ready.
 <br>
 ## About📝⭐
 
@@ -49,7 +49,7 @@ The system was developed as an end-to-end ML pipeline from dataset creation and 
 ✔️ Enables instant testing without external audio files<br>
 <br>
 ⚙️ CPU-Only, Real-Time Friendly<br>
-✔️ 15–22 ms inference time<br>
+✔️ 15-22 ms inference time<br>
 ✔️ Suitable for edge & field deployment<br>
 <br>
 🧪 Noise-Robust Preprocessing<br>
@@ -171,7 +171,7 @@ Visit:
 📌 End-to-end system testing via Flask<br>
 📌 Robustness testing with noisy and clipped audio<br>
 📌 Performance testing under batch inference<br>
-📌 Average inference time: 15–22 ms (CPU)<br>
+📌 Average inference time: 15-22 ms (CPU)<br>
 
 ## Future Enhancements🌱
 
